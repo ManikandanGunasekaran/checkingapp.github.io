@@ -8,6 +8,7 @@ function webpackEmptyAsyncContext(req) {
 	// uncatched exception popping up in devtools
 	return Promise.resolve().then(function() {
 		throw new Error("Cannot find module '" + req + "'.");
+		console.log("check");
 	});
 }
 webpackEmptyAsyncContext.keys = function() { return []; };
